@@ -2,6 +2,7 @@ package com.example.sqlite;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +14,7 @@ import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.HashMap;
 
-public class edit_teman extends AppCompatActivity {
+public class edit_teman extends Activity {
     TextInputEditText Nama, Telepon;
     Button Save;
     String nma, tlp, id;
@@ -38,7 +39,7 @@ public class edit_teman extends AppCompatActivity {
 
         Save.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 if (Nama.getText().toString().equals("") || Telepon.getText().toString().equals("")) {
                     Toast.makeText(getApplicationContext(), "Mohon isi data terlebih dahulu !!!", Toast.LENGTH_LONG).show();
                 } else {
